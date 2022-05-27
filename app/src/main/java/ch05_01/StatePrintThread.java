@@ -20,11 +20,6 @@ public class StatePrintThread extends Thread {
             if (state == Thread.State.TERMINATED) { // 종료 상태일 경우 while 문 종료
                 break;
             }
-
-            try {
-                //0.5초간 일시 정지
-                Thread.sleep(500);
-            } catch(Exception e) {}
         }
     }
 }

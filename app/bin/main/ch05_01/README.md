@@ -31,11 +31,6 @@ public class StatePrintThread extends Thread {
             if (state == Thread.State.TERMINATED) { // 종료 상태일 경우 while 문 종료
                 break;
             }
-
-            try {
-                //0.5초간 일시 정지
-                Thread.sleep(500);
-            } catch(Exception e) {}
         }
     }
 }
@@ -50,13 +45,13 @@ public class TargetThread extends Thread {
 
     @Override
     public void run() {
-        for (long i = 0; i < 1000000000; i++);
+        for (long i = 0; i < 1000000000; i++) {}
 
         try {
             Thread.sleep(1500); // 1.5초간 정지
         } catch (InterruptedException e) {}
 
-        for (long i = 0; i < 1000000000; i++);
+        for (long i = 0; i < 1000000000; i++) {}
     }
 
 }
